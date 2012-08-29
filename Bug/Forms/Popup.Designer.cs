@@ -40,7 +40,7 @@ namespace Bug.Forms
       this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
       this.cbInterval = new System.Windows.Forms.ToolStripComboBox();
       this.separator = new System.Windows.Forms.ToolStripSeparator();
-      this.btnClose = new System.Windows.Forms.ToolStripMenuItem();
+      this.btnExit = new System.Windows.Forms.ToolStripMenuItem();
       this.lblReference = new System.Windows.Forms.Label();
       this.lblToday = new System.Windows.Forms.Label();
       this.lblCurrent = new System.Windows.Forms.Label();
@@ -128,7 +128,7 @@ namespace Bug.Forms
       this.contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cbInterval,
             this.separator,
-            this.btnClose});
+            this.btnExit});
       this.contextMenu.Name = "contextMenuStrip1";
       this.contextMenu.Size = new System.Drawing.Size(213, 59);
       // 
@@ -153,12 +153,13 @@ namespace Bug.Forms
       this.separator.Name = "separator";
       this.separator.Size = new System.Drawing.Size(209, 6);
       // 
-      // btnClose
+      // btnExit
       // 
-      this.btnClose.Name = "btnClose";
-      this.btnClose.Size = new System.Drawing.Size(212, 22);
-      this.btnClose.Text = "Close";
-      this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+      this.btnExit.Image = global::Bug.Properties.Resources.clock_small;
+      this.btnExit.Name = "btnExit";
+      this.btnExit.Size = new System.Drawing.Size(212, 22);
+      this.btnExit.Text = "Exit";
+      this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
       // 
       // lblReference
       // 
@@ -272,7 +273,7 @@ namespace Bug.Forms
     private System.Windows.Forms.ContextMenuStrip contextMenu;
     private System.Windows.Forms.ToolStripComboBox cbInterval;
     private System.Windows.Forms.ToolStripSeparator separator;
-    private System.Windows.Forms.ToolStripMenuItem btnClose;
+    private System.Windows.Forms.ToolStripMenuItem btnExit;
     private System.Windows.Forms.Label lblReference;
     private System.Windows.Forms.PictureBox borderTop;
     private System.Windows.Forms.PictureBox logo;

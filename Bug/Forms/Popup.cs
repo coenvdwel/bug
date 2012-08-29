@@ -88,6 +88,8 @@ namespace Bug.Forms
       Hide();
     }
 
+    #endregion
+
     #region Context menu
 
     private void cbInterval_SelectedIndexChanged(object sender, EventArgs e)
@@ -95,15 +97,15 @@ namespace Bug.Forms
       Settings.Default.BugInterval = Int32.Parse(((string)cbInterval.SelectedItem).Substring(0, 2));
     }
 
-    private void btnClose_Click(object sender, EventArgs e)
+    private void btnExit_Click(object sender, EventArgs e)
     {
-      _entries.Save();
-
-      notificationIcon.Visible = false;
-      _ctx.ExitThread();
+      if (MessageBox.Show("Are you sure?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == System.Windows.Forms.DialogResult.Yes)
+      {
+        notificationIcon.Visible = false;
+        _entries.Save();
+        _ctx.ExitThread();
+      }
     }
-
-    #endregion
 
     #endregion
 

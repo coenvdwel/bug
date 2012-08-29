@@ -63,6 +63,8 @@ namespace Bug.Objects
 
     public void Insert(TimeEntry entry)
     {
+      if(Current != null) Current.To = DateTime.Now;
+
       Current = entry;
       _entries.Add(entry);
     }
