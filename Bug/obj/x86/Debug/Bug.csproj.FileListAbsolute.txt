@@ -7,3 +7,13 @@ C:\code\coens-bug\Bug\bin\Debug\Bug.pdb
 C:\code\coens-bug\Bug\obj\x86\Debug\Bug.Properties.Resources.resources
 C:\code\coens-bug\Bug\obj\x86\Debug\Bug.exe
 C:\code\coens-bug\Bug\obj\x86\Debug\Bug.pdb
+C:\code\bug\Bug\bin\Debug\Bug.exe.config
+C:\code\bug\Bug\obj\x86\Debug\Bug.exe
+C:\code\bug\Bug\bin\Debug\Bug.exe
+C:\code\bug\Bug\bin\Debug\Bug.pdb
+C:\code\bug\Bug\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\code\bug\Bug\obj\x86\Debug\Bug.Forms.Popup.resources
+C:\code\bug\Bug\obj\x86\Debug\Bug.Properties.Resources.resources
+C:\code\bug\Bug\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\code\bug\Bug\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\code\bug\Bug\obj\x86\Debug\Bug.pdb

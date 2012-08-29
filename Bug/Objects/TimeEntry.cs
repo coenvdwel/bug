@@ -7,43 +7,32 @@ namespace Bug.Objects
   {
     public string Text { get; set; }
     public string Reference { get; set; }
-    public int Duration { get; set; }
-    public DateTime CreationTime { get; set; }
+    public DateTime From { get; set; }
+    public DateTime? To { get; set; }
 
-    public int CurrentRunTime
-    {
-      get
-      {
-        return (int)(DateTime.Now - CreationTime).TotalSeconds;
-      }
-    }
+    public TimeSpan RunTime { get { return (To ?? DateTime.Now) - From; } }
 
-    public string Elapsed
-    {
-      get
-      {
-        return DateTimeUtility.GetTimeFromSeconds(Duration + CurrentRunTime);
-      }
-    }
-
-    public TimeEntry(string text, string reference, int duration)
+    public TimeEntry(string text, string reference)
     {
       Text = text;
       Reference = reference;
-      Duration = duration;
+      From = DateTime.Now;
+    }
 
-      CreationTime = DateTime.Now;
+    public TimeEntry(string s)
+    {
+      var line = s.Substring(8, s.Length - 18);
+      var split = line.Split(new[] { "</td><td>" }, StringSplitOptions.None);
+
+      Text = split[0].Trim();
+      Reference = split[1].Trim();
+      From = DateTime.Parse(split[2].Trim());
+      To = DateTime.Parse(split[3].Trim());
     }
 
     public override string ToString()
     {
-      return String.Format("{0}##{1}##{2}", Text, Reference, Duration);
-    }
-
-    public static TimeEntry FromString(string line)
-    {
-      var s = line.Split(new[] { "##" }, StringSplitOptions.None);
-      return new TimeEntry(s[0], s[1], Int32.Parse(s[2]));
+      return String.Format("<tr><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td><td>{4}</td></tr>", Text, Reference, From, To ?? DateTime.Now, RunTime.ToSimpleString());
     }
   }
 }

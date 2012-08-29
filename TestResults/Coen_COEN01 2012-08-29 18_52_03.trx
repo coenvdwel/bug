@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="f9d5327a-c125-47fe-8a86-e87ed504f24e" name="Coen@COEN01 2012-08-29 18:52:03" runUser="coen01\Coen" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="5786f090-59a7-42af-a58c-ae00a1ce97c2">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Coen_COEN01 2012-08-29 18_52_03">
+      <DeploymentItem filename="C:\code\bug\Bug\bin\Release\Bug.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-08-29T18:52:03.0719015+02:00" queuing="2012-08-29T18:52:03.8207028+02:00" start="2012-08-29T18:52:03.8675029+02:00" finish="2012-08-29T18:52:08.1107103+02:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="COEN01" outcome="Error" timestamp="2012-08-29T18:52:08.0951103+02:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GetTimeFromSecondsTest" storage="c:\code\bug\testproject\bin\release\testproject.dll" id="50daf6a6-2866-3129-4567-2b8164ccbaae">
+      <Execution id="f3bb6f9a-47d7-489d-9689-ab0156bf1c36" />
+      <TestMethod codeBase="C:/code/bug/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.DateTimeUtilityTest, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetTimeFromSecondsTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="50daf6a6-2866-3129-4567-2b8164ccbaae" executionId="f3bb6f9a-47d7-489d-9689-ab0156bf1c36" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="f3bb6f9a-47d7-489d-9689-ab0156bf1c36" testId="50daf6a6-2866-3129-4567-2b8164ccbaae" testName="GetTimeFromSecondsTest" computerName="COEN01" duration="00:00:04.2120074" startTime="2012-08-29T18:52:03.8987029+02:00" endTime="2012-08-29T18:52:08.1107103+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f3bb6f9a-47d7-489d-9689-ab0156bf1c36">
+    </UnitTestResult>
+  </Results>
+</TestRun>

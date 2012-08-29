@@ -1,0 +1,7 @@
+C:\code\bug\TestConsole\bin\Release\TestConsole.exe
+C:\code\bug\TestConsole\bin\Release\TestConsole.pdb
+C:\code\bug\TestConsole\bin\Release\Bug.exe
+C:\code\bug\TestConsole\bin\Release\Bug.pdb
+C:\code\bug\TestConsole\obj\x86\Release\ResolveAssemblyReference.cache
+C:\code\bug\TestConsole\obj\x86\Release\TestConsole.exe
+C:\code\bug\TestConsole\obj\x86\Release\TestConsole.pdb

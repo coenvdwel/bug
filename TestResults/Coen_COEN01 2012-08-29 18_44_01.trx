@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="8cfb2850-8a51-4b92-9861-b69750d75980" name="Coen@COEN01 2012-08-29 18:44:01" runUser="coen01\Coen" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="5786f090-59a7-42af-a58c-ae00a1ce97c2">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Coen_COEN01 2012-08-29 18_44_01">
+      <DeploymentItem filename="C:\code\bug\Bug\bin\Release\Bug.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-08-29T18:44:01.6304204+02:00" queuing="2012-08-29T18:44:02.7380224+02:00" start="2012-08-29T18:44:02.7848225+02:00" finish="2012-08-29T18:44:09.7158470+02:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="14" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="13" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="COEN01" outcome="Error" timestamp="2012-08-29T18:44:09.7158470+02:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TimeEntryConstructorTest" storage="c:\code\bug\testproject\bin\release\testproject.dll" id="b10a3813-a73b-7933-aa5d-6d89f699fdb7">
+      <Execution id="f08c526a-1329-484c-b5a6-fae1b87aa1a3" />
+      <TestMethod codeBase="C:/code/bug/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TimeEntryTest, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TimeEntryConstructorTest" />
+    </UnitTest>
+    <UnitTest name="CreationTimeTest" storage="c:\code\bug\testproject\bin\release\testproject.dll" id="b8b321bc-7028-a1e8-67cd-3a4a3c394883">
+      <Execution id="24f6a84c-ddb8-4bc5-aac3-e1171b5f7c73" />
+      <TestMethod codeBase="C:/code/bug/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TimeEntryTest, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreationTimeTest" />
+    </UnitTest>
+    <UnitTest name="GetTimeFromSecondsTest" storage="c:\code\bug\testproject\bin\release\testproject.dll" id="50daf6a6-2866-3129-4567-2b8164ccbaae">
+      <Execution id="d1c1f497-5d69-46f7-b348-f0f1fa004b1d" />
+      <TestMethod codeBase="C:/code/bug/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.DateTimeUtilityTest, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetTimeFromSecondsTest" />
+    </UnitTest>
+    <UnitTest name="SaveTest" storage="c:\code\bug\testproject\bin\release\testproject.dll" id="e2040fae-2757-28cf-a744-e5a90282effd">
+      <Execution id="244059e1-904d-4b93-b2c2-74736e9626ed" />
+      <TestMethod codeBase="C:/code/bug/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TimeEntryCollectionTest, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SaveTest" />
+    </UnitTest>
+    <UnitTest name="FromStringTest" storage="c:\code\bug\testproject\bin\release\testproject.dll" id="b94d9871-5fa7-b619-0a90-eda633d38570">
+      <Execution id="90a395ba-c61c-4721-aa72-8d71b5b95b2e" />
+      <TestMethod codeBase="C:/code/bug/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TimeEntryTest, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="FromStringTest" />
+    </UnitTest>
+    <UnitTest name="InsertTest" storage="c:\code\bug\testproject\bin\release\testproject.dll" id="9308e608-94c3-c793-44a0-7e6168cfb45d">
+      <Execution id="59b70ba3-8346-42db-b295-1ca7529bc2f6" />
+      <TestMethod codeBase="C:/code/bug/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TimeEntryCollectionTest, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="InsertTest" />
+    </UnitTest>
+    <UnitTest name="TextTest" storage="c:\code\bug\testproject\bin\release\testproject.dll" id="3a956414-8c41-044d-bada-5bcd56c67292">
+      <Execution id="6447d0b5-d1b0-48ec-9191-44c26d8d176b" />
+      <TestMethod codeBase="C:/code/bug/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TimeEntryTest, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TextTest" />
+    </UnitTest>
+    <UnitTest name="DurationTest" storage="c:\code\bug\testproject\bin\release\testproject.dll" id="d104ea8a-c82f-eb4d-9967-7c519bf715ac">
+      <Execution id="8ce512c3-add1-4669-8281-2698ae5b95be" />
+      <TestMethod codeBase="C:/code/bug/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TimeEntryTest, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DurationTest" />
+    </UnitTest>
+    <UnitTest name="ReferenceTest" storage="c:\code\bug\testproject\bin\release\testproject.dll" id="8cc36179-a543-ae78-f3ac-efa352047498">
+      <Execution id="f2c7b2f3-e582-4c5c-a01f-a5b890ff011d" />
+      <TestMethod codeBase="C:/code/bug/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TimeEntryTest, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ReferenceTest" />
+    </UnitTest>
+    <UnitTest name="ElapsedTest" storage="c:\code\bug\testproject\bin\release\testproject.dll" id="5720f8dc-750d-0e29-bd84-a77187989a98">
+      <Execution id="2c8195e4-54ea-40ac-909a-d97041229c86" />
+      <TestMethod codeBase="C:/code/bug/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TimeEntryTest, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ElapsedTest" />
+    </UnitTest>
+    <UnitTest name="TimeEntryCollectionConstructorTest" storage="c:\code\bug\testproject\bin\release\testproject.dll" id="2d368439-f824-7d72-7611-116709ee3ce5">
+      <Execution id="98774879-e758-4e7a-bdce-76e5d91bd218" />
+      <TestMethod codeBase="C:/code/bug/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TimeEntryCollectionTest, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TimeEntryCollectionConstructorTest" />
+    </UnitTest>
+    <UnitTest name="ElapsedTest" storage="c:\code\bug\testproject\bin\release\testproject.dll" id="3d0575c4-3d01-08f0-a054-4f33c83d168d">
+      <Execution id="b19b70f0-bc7f-4df3-ab31-dfad6474879e" />
+      <TestMethod codeBase="C:/code/bug/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TimeEntryCollectionTest, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ElapsedTest" />
+    </UnitTest>
+    <UnitTest name="ToStringTest" storage="c:\code\bug\testproject\bin\release\testproject.dll" id="89072e21-dbe3-dce0-01c0-57ef9c9b6553">
+      <Execution id="4f236a46-a6d8-4215-8777-b9abcba11612" />
+      <TestMethod codeBase="C:/code/bug/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TimeEntryTest, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ToStringTest" />
+    </UnitTest>
+    <UnitTest name="CurrentRunTimeTest" storage="c:\code\bug\testproject\bin\release\testproject.dll" id="d55516c7-e13e-d4ce-3245-c0444ccd326b">
+      <Execution id="49f56b2f-72a4-4a82-b2cf-9ae6c695d041" />
+      <TestMethod codeBase="C:/code/bug/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TimeEntryTest, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CurrentRunTimeTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="b10a3813-a73b-7933-aa5d-6d89f699fdb7" executionId="f08c526a-1329-484c-b5a6-fae1b87aa1a3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b94d9871-5fa7-b619-0a90-eda633d38570" executionId="90a395ba-c61c-4721-aa72-8d71b5b95b2e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="89072e21-dbe3-dce0-01c0-57ef9c9b6553" executionId="4f236a46-a6d8-4215-8777-b9abcba11612" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b8b321bc-7028-a1e8-67cd-3a4a3c394883" executionId="24f6a84c-ddb8-4bc5-aac3-e1171b5f7c73" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d55516c7-e13e-d4ce-3245-c0444ccd326b" executionId="49f56b2f-72a4-4a82-b2cf-9ae6c695d041" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d104ea8a-c82f-eb4d-9967-7c519bf715ac" executionId="8ce512c3-add1-4669-8281-2698ae5b95be" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5720f8dc-750d-0e29-bd84-a77187989a98" executionId="2c8195e4-54ea-40ac-909a-d97041229c86" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8cc36179-a543-ae78-f3ac-efa352047498" executionId="f2c7b2f3-e582-4c5c-a01f-a5b890ff011d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3a956414-8c41-044d-bada-5bcd56c67292" executionId="6447d0b5-d1b0-48ec-9191-44c26d8d176b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="50daf6a6-2866-3129-4567-2b8164ccbaae" executionId="d1c1f497-5d69-46f7-b348-f0f1fa004b1d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2d368439-f824-7d72-7611-116709ee3ce5" executionId="98774879-e758-4e7a-bdce-76e5d91bd218" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9308e608-94c3-c793-44a0-7e6168cfb45d" executionId="59b70ba3-8346-42db-b295-1ca7529bc2f6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e2040fae-2757-28cf-a744-e5a90282effd" executionId="244059e1-904d-4b93-b2c2-74736e9626ed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3d0575c4-3d01-08f0-a054-4f33c83d168d" executionId="b19b70f0-bc7f-4df3-ab31-dfad6474879e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="f08c526a-1329-484c-b5a6-fae1b87aa1a3" testId="b10a3813-a73b-7933-aa5d-6d89f699fdb7" testName="TimeEntryConstructorTest" computerName="COEN01" duration="00:00:06.8842244" startTime="2012-08-29T18:44:02.8316226+02:00" endTime="2012-08-29T18:44:09.7158470+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f08c526a-1329-484c-b5a6-fae1b87aa1a3">
+    </UnitTestResult>
+    <UnitTestResult executionId="90a395ba-c61c-4721-aa72-8d71b5b95b2e" testId="b94d9871-5fa7-b619-0a90-eda633d38570" testName="FromStringTest" computerName="COEN01" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="90a395ba-c61c-4721-aa72-8d71b5b95b2e">
+    </UnitTestResult>
+    <UnitTestResult executionId="4f236a46-a6d8-4215-8777-b9abcba11612" testId="89072e21-dbe3-dce0-01c0-57ef9c9b6553" testName="ToStringTest" computerName="COEN01" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4f236a46-a6d8-4215-8777-b9abcba11612">
+    </UnitTestResult>
+    <UnitTestResult executionId="24f6a84c-ddb8-4bc5-aac3-e1171b5f7c73" testId="b8b321bc-7028-a1e8-67cd-3a4a3c394883" testName="CreationTimeTest" computerName="COEN01" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="24f6a84c-ddb8-4bc5-aac3-e1171b5f7c73">
+    </UnitTestResult>
+    <UnitTestResult executionId="49f56b2f-72a4-4a82-b2cf-9ae6c695d041" testId="d55516c7-e13e-d4ce-3245-c0444ccd326b" testName="CurrentRunTimeTest" computerName="COEN01" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="49f56b2f-72a4-4a82-b2cf-9ae6c695d041">
+    </UnitTestResult>
+    <UnitTestResult executionId="8ce512c3-add1-4669-8281-2698ae5b95be" testId="d104ea8a-c82f-eb4d-9967-7c519bf715ac" testName="DurationTest" computerName="COEN01" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8ce512c3-add1-4669-8281-2698ae5b95be">
+    </UnitTestResult>
+    <UnitTestResult executionId="2c8195e4-54ea-40ac-909a-d97041229c86" testId="5720f8dc-750d-0e29-bd84-a77187989a98" testName="ElapsedTest" computerName="COEN01" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2c8195e4-54ea-40ac-909a-d97041229c86">
+    </UnitTestResult>
+    <UnitTestResult executionId="f2c7b2f3-e582-4c5c-a01f-a5b890ff011d" testId="8cc36179-a543-ae78-f3ac-efa352047498" testName="ReferenceTest" computerName="COEN01" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f2c7b2f3-e582-4c5c-a01f-a5b890ff011d">
+    </UnitTestResult>
+    <UnitTestResult executionId="6447d0b5-d1b0-48ec-9191-44c26d8d176b" testId="3a956414-8c41-044d-bada-5bcd56c67292" testName="TextTest" computerName="COEN01" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6447d0b5-d1b0-48ec-9191-44c26d8d176b">
+    </UnitTestResult>
+    <UnitTestResult executionId="d1c1f497-5d69-46f7-b348-f0f1fa004b1d" testId="50daf6a6-2866-3129-4567-2b8164ccbaae" testName="GetTimeFromSecondsTest" computerName="COEN01" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d1c1f497-5d69-46f7-b348-f0f1fa004b1d">
+    </UnitTestResult>
+    <UnitTestResult executionId="98774879-e758-4e7a-bdce-76e5d91bd218" testId="2d368439-f824-7d72-7611-116709ee3ce5" testName="TimeEntryCollectionConstructorTest" computerName="COEN01" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="98774879-e758-4e7a-bdce-76e5d91bd218">
+    </UnitTestResult>
+    <UnitTestResult executionId="59b70ba3-8346-42db-b295-1ca7529bc2f6" testId="9308e608-94c3-c793-44a0-7e6168cfb45d" testName="InsertTest" computerName="COEN01" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="59b70ba3-8346-42db-b295-1ca7529bc2f6">
+    </UnitTestResult>
+    <UnitTestResult executionId="244059e1-904d-4b93-b2c2-74736e9626ed" testId="e2040fae-2757-28cf-a744-e5a90282effd" testName="SaveTest" computerName="COEN01" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="244059e1-904d-4b93-b2c2-74736e9626ed">
+    </UnitTestResult>
+    <UnitTestResult executionId="b19b70f0-bc7f-4df3-ab31-dfad6474879e" testId="3d0575c4-3d01-08f0-a054-4f33c83d168d" testName="ElapsedTest" computerName="COEN01" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b19b70f0-bc7f-4df3-ab31-dfad6474879e">
+    </UnitTestResult>
+  </Results>
+</TestRun>

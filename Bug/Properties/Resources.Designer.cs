@@ -74,9 +74,9 @@ namespace Bug.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap icon {
+        internal static System.Drawing.Bitmap clock_small {
             get {
-                object obj = ResourceManager.GetObject("icon", resourceCulture);
+                object obj = ResourceManager.GetObject("clock_small", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

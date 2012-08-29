@@ -35,21 +35,20 @@ namespace Bug.Forms
       this.panel = new System.Windows.Forms.Panel();
       this.btnHide = new System.Windows.Forms.LinkLabel();
       this.borderBottom = new System.Windows.Forms.PictureBox();
-      this.btnExport2 = new System.Windows.Forms.LinkLabel();
+      this.btnView = new System.Windows.Forms.LinkLabel();
       this.notificationIcon = new System.Windows.Forms.NotifyIcon(this.components);
       this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
       this.cbInterval = new System.Windows.Forms.ToolStripComboBox();
       this.separator = new System.Windows.Forms.ToolStripSeparator();
-      this.btnExport = new System.Windows.Forms.ToolStripMenuItem();
       this.btnClose = new System.Windows.Forms.ToolStripMenuItem();
       this.lblReference = new System.Windows.Forms.Label();
-      this.borderTop = new System.Windows.Forms.PictureBox();
-      this.logo = new System.Windows.Forms.PictureBox();
       this.lblToday = new System.Windows.Forms.Label();
       this.lblCurrent = new System.Windows.Forms.Label();
       this.timer = new System.Windows.Forms.Timer(this.components);
       this.tbEntry = new Bug.Controls.SelectionTextBox();
       this.tbReference = new Bug.Controls.SelectionTextBox();
+      this.borderTop = new System.Windows.Forms.PictureBox();
+      this.logo = new System.Windows.Forms.PictureBox();
       this.panel.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.borderBottom)).BeginInit();
       this.contextMenu.SuspendLayout();
@@ -62,7 +61,7 @@ namespace Bug.Forms
       this.panel.BackColor = System.Drawing.SystemColors.InactiveBorder;
       this.panel.Controls.Add(this.btnHide);
       this.panel.Controls.Add(this.borderBottom);
-      this.panel.Controls.Add(this.btnExport2);
+      this.panel.Controls.Add(this.btnView);
       this.panel.Dock = System.Windows.Forms.DockStyle.Bottom;
       this.panel.Location = new System.Drawing.Point(0, 134);
       this.panel.Name = "panel";
@@ -97,22 +96,22 @@ namespace Bug.Forms
       this.borderBottom.TabIndex = 2;
       this.borderBottom.TabStop = false;
       // 
-      // btnExport2
+      // btnView
       // 
-      this.btnExport2.ActiveLinkColor = System.Drawing.Color.Blue;
-      this.btnExport2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+      this.btnView.ActiveLinkColor = System.Drawing.Color.Blue;
+      this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.btnExport2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-      this.btnExport2.LinkColor = System.Drawing.Color.Blue;
-      this.btnExport2.Location = new System.Drawing.Point(12, 10);
-      this.btnExport2.Name = "btnExport2";
-      this.btnExport2.Size = new System.Drawing.Size(160, 17);
-      this.btnExport2.TabIndex = 1;
-      this.btnExport2.TabStop = true;
-      this.btnExport2.Text = "Export";
-      this.btnExport2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-      this.btnExport2.VisitedLinkColor = System.Drawing.Color.Blue;
-      this.btnExport2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.btnExport2_LinkClicked);
+      this.btnView.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+      this.btnView.LinkColor = System.Drawing.Color.Blue;
+      this.btnView.Location = new System.Drawing.Point(12, 10);
+      this.btnView.Name = "btnView";
+      this.btnView.Size = new System.Drawing.Size(160, 17);
+      this.btnView.TabIndex = 1;
+      this.btnView.TabStop = true;
+      this.btnView.Text = "Open today\'s page";
+      this.btnView.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+      this.btnView.VisitedLinkColor = System.Drawing.Color.Blue;
+      this.btnView.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.btnView_LinkClicked);
       // 
       // notificationIcon
       // 
@@ -129,35 +128,30 @@ namespace Bug.Forms
       this.contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cbInterval,
             this.separator,
-            this.btnExport,
             this.btnClose});
       this.contextMenu.Name = "contextMenuStrip1";
-      this.contextMenu.Size = new System.Drawing.Size(213, 103);
+      this.contextMenu.Size = new System.Drawing.Size(213, 59);
       // 
       // cbInterval
       // 
       this.cbInterval.Items.AddRange(new object[] {
             "1 minute",
             "2 minutes",
+            "3 minutes",
             "5 minutes",
+            "10 minutes",
             "15 minutes",
             "30 minutes",
-            "1 hour"});
+            "60 minutes"});
       this.cbInterval.Name = "cbInterval";
       this.cbInterval.Size = new System.Drawing.Size(152, 23);
-      this.cbInterval.Text = "15 minutes";
+      this.cbInterval.Text = "Choose bug interval...";
+      this.cbInterval.SelectedIndexChanged += new System.EventHandler(this.cbInterval_SelectedIndexChanged);
       // 
       // separator
       // 
       this.separator.Name = "separator";
       this.separator.Size = new System.Drawing.Size(209, 6);
-      // 
-      // btnExport
-      // 
-      this.btnExport.Name = "btnExport";
-      this.btnExport.Size = new System.Drawing.Size(212, 22);
-      this.btnExport.Text = "Export";
-      this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
       // 
       // btnClose
       // 
@@ -175,44 +169,23 @@ namespace Bug.Forms
       this.lblReference.TabIndex = 3;
       this.lblReference.Text = "#";
       // 
-      // borderTop
-      // 
-      this.borderTop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-      this.borderTop.Image = global::Bug.Properties.Resources.border_gray;
-      this.borderTop.Location = new System.Drawing.Point(0, 64);
-      this.borderTop.Name = "borderTop";
-      this.borderTop.Size = new System.Drawing.Size(184, 1);
-      this.borderTop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-      this.borderTop.TabIndex = 3;
-      this.borderTop.TabStop = false;
-      // 
-      // logo
-      // 
-      this.logo.Image = global::Bug.Properties.Resources.icon;
-      this.logo.Location = new System.Drawing.Point(15, 19);
-      this.logo.Name = "logo";
-      this.logo.Size = new System.Drawing.Size(20, 20);
-      this.logo.TabIndex = 4;
-      this.logo.TabStop = false;
-      // 
       // lblToday
       // 
       this.lblToday.AutoSize = true;
       this.lblToday.Location = new System.Drawing.Point(54, 16);
       this.lblToday.Name = "lblToday";
-      this.lblToday.Size = new System.Drawing.Size(95, 13);
+      this.lblToday.Size = new System.Drawing.Size(46, 13);
       this.lblToday.TabIndex = 5;
-      this.lblToday.Text = "Today: 4 hrs, 26 m";
+      this.lblToday.Text = "Today: -";
       // 
       // lblCurrent
       // 
       this.lblCurrent.AutoSize = true;
       this.lblCurrent.Location = new System.Drawing.Point(55, 31);
       this.lblCurrent.Name = "lblCurrent";
-      this.lblCurrent.Size = new System.Drawing.Size(70, 13);
+      this.lblCurrent.Size = new System.Drawing.Size(50, 13);
       this.lblCurrent.TabIndex = 6;
-      this.lblCurrent.Text = "Current: 16 m";
+      this.lblCurrent.Text = "Current: -";
       // 
       // timer
       // 
@@ -236,6 +209,27 @@ namespace Bug.Forms
       this.tbReference.TabIndex = 2;
       this.tbReference.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbReference_KeyPress);
       // 
+      // borderTop
+      // 
+      this.borderTop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.borderTop.Image = global::Bug.Properties.Resources.border_gray;
+      this.borderTop.Location = new System.Drawing.Point(0, 64);
+      this.borderTop.Name = "borderTop";
+      this.borderTop.Size = new System.Drawing.Size(184, 1);
+      this.borderTop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+      this.borderTop.TabIndex = 3;
+      this.borderTop.TabStop = false;
+      // 
+      // logo
+      // 
+      this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
+      this.logo.Location = new System.Drawing.Point(14, 14);
+      this.logo.Name = "logo";
+      this.logo.Size = new System.Drawing.Size(32, 32);
+      this.logo.TabIndex = 4;
+      this.logo.TabStop = false;
+      // 
       // Popup
       // 
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -244,8 +238,8 @@ namespace Bug.Forms
       this.ControlBox = false;
       this.Controls.Add(this.lblCurrent);
       this.Controls.Add(this.lblToday);
-      this.Controls.Add(this.logo);
       this.Controls.Add(this.borderTop);
+      this.Controls.Add(this.logo);
       this.Controls.Add(this.tbEntry);
       this.Controls.Add(this.lblReference);
       this.Controls.Add(this.panel);
@@ -258,6 +252,7 @@ namespace Bug.Forms
       this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
       this.TopMost = true;
       this.Deactivate += new System.EventHandler(this.Popup_Deactivate);
+      this.Load += new System.EventHandler(this.Popup_Load);
       this.panel.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.borderBottom)).EndInit();
       this.contextMenu.ResumeLayout(false);
@@ -272,12 +267,11 @@ namespace Bug.Forms
 
     private System.Windows.Forms.Panel panel;
     private System.Windows.Forms.PictureBox borderBottom;
-    private System.Windows.Forms.LinkLabel btnExport2;
+    private System.Windows.Forms.LinkLabel btnView;
     private System.Windows.Forms.NotifyIcon notificationIcon;
     private System.Windows.Forms.ContextMenuStrip contextMenu;
     private System.Windows.Forms.ToolStripComboBox cbInterval;
     private System.Windows.Forms.ToolStripSeparator separator;
-    private System.Windows.Forms.ToolStripMenuItem btnExport;
     private System.Windows.Forms.ToolStripMenuItem btnClose;
     private System.Windows.Forms.Label lblReference;
     private System.Windows.Forms.PictureBox borderTop;
