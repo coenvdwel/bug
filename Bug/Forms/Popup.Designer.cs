@@ -33,13 +33,14 @@ namespace Bug.Forms
       this.components = new System.ComponentModel.Container();
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Popup));
       this.panel = new System.Windows.Forms.Panel();
-      this.btnHide = new System.Windows.Forms.LinkLabel();
+      this.btnStop = new System.Windows.Forms.LinkLabel();
       this.borderBottom = new System.Windows.Forms.PictureBox();
       this.btnView = new System.Windows.Forms.LinkLabel();
       this.notificationIcon = new System.Windows.Forms.NotifyIcon(this.components);
       this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
       this.cbInterval = new System.Windows.Forms.ToolStripComboBox();
       this.separator = new System.Windows.Forms.ToolStripSeparator();
+      this.btnOpenDir = new System.Windows.Forms.ToolStripMenuItem();
       this.btnExit = new System.Windows.Forms.ToolStripMenuItem();
       this.lblReference = new System.Windows.Forms.Label();
       this.lblToday = new System.Windows.Forms.Label();
@@ -59,7 +60,7 @@ namespace Bug.Forms
       // panel
       // 
       this.panel.BackColor = System.Drawing.SystemColors.InactiveBorder;
-      this.panel.Controls.Add(this.btnHide);
+      this.panel.Controls.Add(this.btnStop);
       this.panel.Controls.Add(this.borderBottom);
       this.panel.Controls.Add(this.btnView);
       this.panel.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -68,22 +69,22 @@ namespace Bug.Forms
       this.panel.Size = new System.Drawing.Size(184, 50);
       this.panel.TabIndex = 0;
       // 
-      // btnHide
+      // btnStop
       // 
-      this.btnHide.ActiveLinkColor = System.Drawing.Color.Blue;
-      this.btnHide.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+      this.btnStop.ActiveLinkColor = System.Drawing.Color.Blue;
+      this.btnStop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.btnHide.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-      this.btnHide.LinkColor = System.Drawing.Color.Blue;
-      this.btnHide.Location = new System.Drawing.Point(12, 28);
-      this.btnHide.Name = "btnHide";
-      this.btnHide.Size = new System.Drawing.Size(160, 17);
-      this.btnHide.TabIndex = 3;
-      this.btnHide.TabStop = true;
-      this.btnHide.Text = "Hide";
-      this.btnHide.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-      this.btnHide.VisitedLinkColor = System.Drawing.Color.Blue;
-      this.btnHide.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.btnHide_LinkClicked);
+      this.btnStop.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+      this.btnStop.LinkColor = System.Drawing.Color.Blue;
+      this.btnStop.Location = new System.Drawing.Point(12, 27);
+      this.btnStop.Name = "btnStop";
+      this.btnStop.Size = new System.Drawing.Size(160, 14);
+      this.btnStop.TabIndex = 3;
+      this.btnStop.TabStop = true;
+      this.btnStop.Text = "Pause / end of the day";
+      this.btnStop.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+      this.btnStop.VisitedLinkColor = System.Drawing.Color.Blue;
+      this.btnStop.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.btnStop_LinkClicked);
       // 
       // borderBottom
       // 
@@ -121,6 +122,7 @@ namespace Bug.Forms
       this.notificationIcon.ContextMenuStrip = this.contextMenu;
       this.notificationIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notificationIcon.Icon")));
       this.notificationIcon.Visible = true;
+      this.notificationIcon.BalloonTipClicked += new System.EventHandler(this.notificationIcon_BalloonTipClicked);
       this.notificationIcon.Click += new System.EventHandler(this.notificationIcon_Click);
       // 
       // contextMenu
@@ -128,9 +130,10 @@ namespace Bug.Forms
       this.contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cbInterval,
             this.separator,
+            this.btnOpenDir,
             this.btnExit});
       this.contextMenu.Name = "contextMenuStrip1";
-      this.contextMenu.Size = new System.Drawing.Size(213, 59);
+      this.contextMenu.Size = new System.Drawing.Size(213, 103);
       // 
       // cbInterval
       // 
@@ -152,6 +155,13 @@ namespace Bug.Forms
       // 
       this.separator.Name = "separator";
       this.separator.Size = new System.Drawing.Size(209, 6);
+      // 
+      // btnOpenDir
+      // 
+      this.btnOpenDir.Name = "btnOpenDir";
+      this.btnOpenDir.Size = new System.Drawing.Size(212, 22);
+      this.btnOpenDir.Text = "Open save directory";
+      this.btnOpenDir.Click += new System.EventHandler(this.btnOpenDir_Click);
       // 
       // btnExit
       // 
@@ -282,6 +292,7 @@ namespace Bug.Forms
     private SelectionTextBox tbEntry;
     private SelectionTextBox tbReference;
     private System.Windows.Forms.Timer timer;
-    private System.Windows.Forms.LinkLabel btnHide;
+    private System.Windows.Forms.LinkLabel btnStop;
+    private System.Windows.Forms.ToolStripMenuItem btnOpenDir;
   }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using Bug.Objects;
 using Bug.Properties;
@@ -46,6 +47,7 @@ namespace Bug.Forms
 
       _entries.Insert(new TimeEntry(tbEntry.Text, tbReference.Text));
       _entries.Save();
+      btnStop.Enabled = true;
     }
 
     private void tbEntry_KeyPress(object sender, KeyPressEventArgs e)
@@ -64,13 +66,29 @@ namespace Bug.Forms
       }
     }
 
+    private void btnView_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+    {
+      Process.Start(Path.Combine(_entries.Folder, _entries.FileName));
+    }
+
+    private void btnStop_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+    {
+      btnStop.Enabled = false;
+
+      tbEntry.Text = String.Empty;
+      tbReference.Text = String.Empty;
+      lblCurrent.Text = " - pauzed -";
+
+      _entries.Insert(null);
+    }
+
     #endregion
 
     #region Notification Icon
 
     private void notificationIcon_Click(object sender, EventArgs e)
     {
-      if (((MouseEventArgs)e).Button == MouseButtons.Left)
+      if (e == null || (((MouseEventArgs)e).Button == MouseButtons.Left))
       {
         Location = new Point(Cursor.Position.X - (Width / 2), Cursor.Position.Y - Height - 25);
 
@@ -81,15 +99,9 @@ namespace Bug.Forms
       }
     }
 
-    private void btnView_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+    private void notificationIcon_BalloonTipClicked(object sender, EventArgs e)
     {
-      Process.Start(_entries.FileName);
-    }
-
-    private void btnHide_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-    {
-      tbReference.SelectAll();
-      Hide();
+      notificationIcon_Click(null, null);
     }
 
     #endregion
@@ -99,6 +111,11 @@ namespace Bug.Forms
     private void cbInterval_SelectedIndexChanged(object sender, EventArgs e)
     {
       Settings.Default.BugInterval = Int32.Parse(((string)cbInterval.SelectedItem).Substring(0, 2));
+    }
+
+    private void btnOpenDir_Click(object sender, EventArgs e)
+    {
+      Process.Start(_entries.Folder);
     }
 
     private void btnExit_Click(object sender, EventArgs e)
@@ -138,12 +155,8 @@ namespace Bug.Forms
 
       if (m.Msg == GlobalHotkeyWrapper.WM_HOTKEY)
       {
-        Location = new Point(Cursor.Position.X - (Width / 2), Cursor.Position.Y - Height - 25);
-
-        Show();
-        Focus();
-        tbEntry.SelectAll();
-        tbEntry.Focus();
+        if (Visible) Popup_Deactivate(null, null);
+        else notificationIcon_Click(null, null);
       }
     }
 
