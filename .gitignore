@@ -25,3 +25,4 @@ _ReSharper*
 Docs/DocumentationProject/buildhelp/*
 Docs/DocumentationProject/Help/html/*
 Test/*
+TestResults/*
