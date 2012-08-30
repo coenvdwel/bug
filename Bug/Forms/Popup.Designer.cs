@@ -253,7 +253,7 @@ namespace Bug.Forms
       this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
       this.TopMost = true;
       this.Deactivate += new System.EventHandler(this.Popup_Deactivate);
-      this.Load += new System.EventHandler(this.Popup_Load);
+      this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Popup_FormClosing);
       this.panel.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.borderBottom)).EndInit();
       this.contextMenu.ResumeLayout(false);

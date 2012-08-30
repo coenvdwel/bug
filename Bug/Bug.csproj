@@ -63,6 +63,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Utilities\GlobalHotkeyWrapper.cs" />
     <Compile Include="Utilities\TimeSpanExtensions.cs" />
     <EmbeddedResource Include="Forms\Popup.resx">
       <DependentUpon>Popup.cs</DependentUpon>

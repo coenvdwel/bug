@@ -20,11 +20,15 @@ namespace Bug.Forms
       _entries = new TimeEntryCollection();
 
       InitializeComponent();
+
+      cbInterval.Text = Settings.Default.BugInterval + (Settings.Default.BugInterval == 1 ? " minute" : " minutes");
+      GlobalHotkeyWrapper.RegisterHotKey(this, Keys.Z | Keys.Alt);
     }
 
-    private void Popup_Load(object sender, EventArgs e)
+    private void Popup_FormClosing(object sender, FormClosingEventArgs e)
     {
-      cbInterval.Text = Settings.Default.BugInterval + (Settings.Default.BugInterval == 1 ? " minute" : " minutes");
+      notificationIcon.Visible = false;
+      GlobalHotkeyWrapper.UnregisterHotKey(this);
     }
 
     #region Popup
@@ -122,6 +126,25 @@ namespace Bug.Forms
       }
 
       if ((DateTime.Now - _entries.LastSaveTime).TotalMinutes >= 1) _entries.Save();
+    }
+
+    #endregion
+
+    #region Global hotkey
+
+    protected override void WndProc(ref Message m)
+    {
+      base.WndProc(ref m);
+
+      if (m.Msg == GlobalHotkeyWrapper.WM_HOTKEY)
+      {
+        Location = new Point(Cursor.Position.X - (Width / 2), Cursor.Position.Y - Height - 25);
+
+        Show();
+        Focus();
+        tbEntry.SelectAll();
+        tbEntry.Focus();
+      }
     }
 
     #endregion
