@@ -28,14 +28,6 @@ namespace Bug.Objects
       if (!Directory.Exists(_folder)) Directory.CreateDirectory(_folder);
       if (!File.Exists(Path.Combine(_folder, _fileName))) File.WriteAllText(Path.Combine(_folder, _fileName), String.Empty);
 
-      Load();
-    }
-
-    private void Load()
-    {
-      LastSaveTime = DateTime.Now;
-      _entries.Clear();
-
       var lines = File.ReadAllLines(Path.Combine(_folder, _fileName));
       for (var i = 1; i < lines.Length - 1; i++)
       {
@@ -60,6 +52,7 @@ namespace Bug.Objects
       foreach (var entry in _entries) sb.AppendLine(entry.ToString());
       sb.Append("</tbody></table></body></html>");
 
+      LastSaveTime = DateTime.Now;
       File.WriteAllText(Path.Combine(_folder, _fileName), sb.ToString());
     }
 

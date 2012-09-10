@@ -46,10 +46,10 @@ namespace Bug.Forms
       this.lblToday = new System.Windows.Forms.Label();
       this.lblCurrent = new System.Windows.Forms.Label();
       this.timer = new System.Windows.Forms.Timer(this.components);
-      this.tbEntry = new Bug.Controls.SelectionTextBox();
-      this.tbReference = new Bug.Controls.SelectionTextBox();
       this.borderTop = new System.Windows.Forms.PictureBox();
       this.logo = new System.Windows.Forms.PictureBox();
+      this.tbEntry = new Bug.Controls.SelectionTextBox();
+      this.tbReference = new Bug.Controls.SelectionTextBox();
       this.panel.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.borderBottom)).BeginInit();
       this.contextMenu.SuspendLayout();
@@ -72,8 +72,8 @@ namespace Bug.Forms
       // btnStop
       // 
       this.btnStop.ActiveLinkColor = System.Drawing.Color.Blue;
-      this.btnStop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+      this.btnStop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                  | System.Windows.Forms.AnchorStyles.Right)));
       this.btnStop.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
       this.btnStop.LinkColor = System.Drawing.Color.Blue;
       this.btnStop.Location = new System.Drawing.Point(12, 27);
@@ -100,8 +100,8 @@ namespace Bug.Forms
       // btnView
       // 
       this.btnView.ActiveLinkColor = System.Drawing.Color.Blue;
-      this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+      this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                  | System.Windows.Forms.AnchorStyles.Right)));
       this.btnView.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
       this.btnView.LinkColor = System.Drawing.Color.Blue;
       this.btnView.Location = new System.Drawing.Point(12, 10);
@@ -133,7 +133,7 @@ namespace Bug.Forms
             this.btnOpenDir,
             this.btnExit});
       this.contextMenu.Name = "contextMenuStrip1";
-      this.contextMenu.Size = new System.Drawing.Size(213, 103);
+      this.contextMenu.Size = new System.Drawing.Size(213, 81);
       // 
       // cbInterval
       // 
@@ -204,26 +204,10 @@ namespace Bug.Forms
       this.timer.Interval = 500;
       this.timer.Tick += new System.EventHandler(this.timer_Tick);
       // 
-      // tbEntry
-      // 
-      this.tbEntry.Location = new System.Drawing.Point(12, 79);
-      this.tbEntry.Name = "tbEntry";
-      this.tbEntry.Size = new System.Drawing.Size(160, 20);
-      this.tbEntry.TabIndex = 1;
-      this.tbEntry.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbEntry_KeyPress);
-      // 
-      // tbReference
-      // 
-      this.tbReference.Location = new System.Drawing.Point(129, 103);
-      this.tbReference.Name = "tbReference";
-      this.tbReference.Size = new System.Drawing.Size(43, 20);
-      this.tbReference.TabIndex = 2;
-      this.tbReference.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbReference_KeyPress);
-      // 
       // borderTop
       // 
-      this.borderTop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+      this.borderTop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                  | System.Windows.Forms.AnchorStyles.Right)));
       this.borderTop.Image = global::Bug.Properties.Resources.border_gray;
       this.borderTop.Location = new System.Drawing.Point(0, 64);
       this.borderTop.Name = "borderTop";
@@ -240,6 +224,22 @@ namespace Bug.Forms
       this.logo.Size = new System.Drawing.Size(32, 32);
       this.logo.TabIndex = 4;
       this.logo.TabStop = false;
+      // 
+      // tbEntry
+      // 
+      this.tbEntry.Location = new System.Drawing.Point(12, 79);
+      this.tbEntry.Name = "tbEntry";
+      this.tbEntry.Size = new System.Drawing.Size(160, 20);
+      this.tbEntry.TabIndex = 1;
+      this.tbEntry.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbEntry_KeyPress);
+      // 
+      // tbReference
+      // 
+      this.tbReference.Location = new System.Drawing.Point(129, 103);
+      this.tbReference.Name = "tbReference";
+      this.tbReference.Size = new System.Drawing.Size(43, 20);
+      this.tbReference.TabIndex = 2;
+      this.tbReference.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbReference_KeyPress);
       // 
       // Popup
       // 

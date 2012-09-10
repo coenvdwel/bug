@@ -36,11 +36,7 @@ namespace Bug.Forms
 
     private void Popup_Deactivate(object sender, EventArgs e)
     {
-      if (Visible)
-      {
-        tbReference.SelectAll();
-        Hide();
-      }
+      if (Visible) Hide();
 
       if (tbEntry.Text == String.Empty && tbReference.Text == String.Empty) return;
       if (_entries.Current != null && tbEntry.Text == _entries.Current.Text && tbReference.Text == _entries.Current.Reference) return;
@@ -59,11 +55,7 @@ namespace Bug.Forms
     private void tbReference_KeyPress(object sender, KeyPressEventArgs e)
     {
       _lastConfirm = DateTime.Now;
-      if (e.KeyChar == (char)Keys.Return)
-      {
-        tbReference.SelectAll();
-        Hide();
-      }
+      if (e.KeyChar == (char)Keys.Return) Hide();
     }
 
     private void btnView_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -93,9 +85,9 @@ namespace Bug.Forms
         Location = new Point(Cursor.Position.X - (Width / 2), Cursor.Position.Y - Height - 25);
 
         Show();
+
         Focus();
-        tbEntry.SelectAll();
-        tbEntry.Focus();
+        tbReference.SelectAll();
       }
     }
 
@@ -139,7 +131,7 @@ namespace Bug.Forms
 
       if (!Visible && ((DateTime.Now - _lastConfirm).TotalMinutes >= Settings.Default.BugInterval))
       {
-        notificationIcon.ShowBalloonTip(2000);
+        notificationIcon.ShowBalloonTip(1000);
       }
 
       if ((DateTime.Now - _entries.LastSaveTime).TotalMinutes >= 1) _entries.Save();
