@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using Bug.Objects;
 using Bug.Properties;
 using Bug.Utilities;
+using Microsoft.Win32;
 
 namespace Bug.Forms
 {
@@ -23,6 +24,8 @@ namespace Bug.Forms
       InitializeComponent();
 
       cbInterval.Text = Settings.Default.BugInterval + (Settings.Default.BugInterval == 1 ? " minute" : " minutes");
+
+      SystemEvents.PowerModeChanged += new PowerModeChangedEventHandler(SystemEvents_PowerModeChanged);
       GlobalHotkeyWrapper.RegisterHotKey(this, Keys.Z | Keys.Alt);
     }
 
@@ -150,6 +153,15 @@ namespace Bug.Forms
         if (Visible) Popup_Deactivate(null, null);
         else notificationIcon_Click(null, null);
       }
+    }
+
+    #endregion
+
+    #region Shutdown events
+
+    void SystemEvents_PowerModeChanged(object sender, PowerModeChangedEventArgs e)
+    {
+      if (e.Mode == PowerModes.Suspend) btnStop_LinkClicked(sender, null);
     }
 
     #endregion
